@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <title>Dropalink</title>
   <style>
+    /* Estilização geral */
     body {
       margin: 0;
       padding: 0;
@@ -11,26 +12,26 @@
       background-color: #f7f7f7;
       text-align: center;
     }
-
+    /* Container do topo */
     .topo {
       margin-top: 60px;
     }
-
     .topo img {
-      width: 200px;
-      border-radius: 50%;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+      width: 200px;           /* ajusta tamanho da foto */
+      border-radius: 50%;     /* deixa a foto redonda */
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2); /* sombra leve */
     }
-
+    /* Nome do canal */
     .nome-canal {
       margin-top: 20px;
       font-size: 28px;
       font-weight: bold;
       color: #222;
     }
-
+    /* Conteúdo abaixo (se quiser adicionar mais seções depois) */
     .conteudo {
-      margin-top: 40px;
+      margin: 40px auto;
+      max-width: 800px;
       font-size: 18px;
       color: #444;
     }
@@ -38,14 +39,15 @@
 </head>
 <body>
 
+  <!-- Topo com imagem e nome -->
   <div class="topo">
     <img src="gato.jpg" alt="Foto do canal">
     <div class="nome-canal">Dropalink</div>
   </div>
 
+  <!-- Espaço para textos ou outros conteúdos -->
   <div class="conteudo">
-    <!-- Aqui você pode adicionar mais conteúdo depois -->
-    <p>Bem-vindo ao site oficial do canal Dropalink!</p>
+    <p>Bem-vindo ao site oficial do canal <strong>Dropalink</strong>!</p>
   </div>
 
 </body>
