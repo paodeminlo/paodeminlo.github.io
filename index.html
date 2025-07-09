@@ -4,50 +4,76 @@
   <meta charset="UTF-8">
   <title>Dropalink</title>
   <style>
-    /* Estilização geral */
     body {
       margin: 0;
       padding: 0;
+      background-color: #f4f4f4;
       font-family: Arial, sans-serif;
-      background-color: #f7f7f7;
       text-align: center;
     }
-    /* Container do topo */
-    .topo {
-      margin-top: 60px;
+
+    .container {
+      max-width: 400px;
+      margin: 40px auto;
+      padding: 30px;
+      background-color: white;
+      border-radius: 20px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
     }
-    .topo img {
-      width: 200px;           /* ajusta tamanho da foto */
-      border-radius: 50%;     /* deixa a foto redonda */
-      box-shadow: 0 4px 12px rgba(0,0,0,0.2); /* sombra leve */
+
+    .foto {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      object-fit: cover;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
     }
-    /* Nome do canal */
+
     .nome-canal {
-      margin-top: 20px;
-      font-size: 28px;
+      margin-top: 15px;
+      font-size: 26px;
       font-weight: bold;
       color: #222;
     }
-    /* Conteúdo abaixo (se quiser adicionar mais seções depois) */
-    .conteudo {
-      margin: 40px auto;
-      max-width: 800px;
-      font-size: 18px;
-      color: #444;
+
+    h2 {
+      margin-top: 30px;
+      font-size: 22px;
+    }
+
+    .link-btn {
+      display: block;
+      margin: 15px 0;
+      padding: 12px;
+      background-color: #e0e0e0;
+      border-radius: 10px;
+      text-decoration: none;
+      color: #000;
+      font-weight: bold;
+      transition: background-color 0.2s;
+    }
+
+    .link-btn:hover {
+      background-color: #ccc;
     }
   </style>
 </head>
 <body>
 
-  <!-- Topo com imagem e nome -->
-  <div class="topo">
-    <img src="gato.jpg" alt="Foto do canal">
-    <div class="nome-canal">Dropalink</div>
-  </div>
+  <div class="container">
+    <!-- https://i.pinimg.com/originals/77/c4/3c/77c43c9c12eeacd4f0c0c22a8cffeccf.jpg -->
+    <img src="gato.jpg" alt="Foto do canal" class="foto">
 
-  <!-- Espaço para textos ou outros conteúdos -->
-  <div class="conteudo">
-    <p>Bem-vindo ao site oficial do canal <strong>Dropalink</strong>!</p>
+    <!-- NOME DO CANAL -->
+    <div class="nome-canal">Dropalink</div>
+
+    <!-- TÍTULO -->
+    <h2>🔥 Meus Links 🔥</h2>
+
+    <!-- LINKS -->
+    <a href="#" class="link-btn">Link 1</a>
+    <a href="#" class="link-btn">Link 2</a>
+    <a href="#" class="link-btn">Link 3</a>
   </div>
 
 </body>
