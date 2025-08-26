@@ -1,110 +1,138 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Scripts para Blox Fruits</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #0e0e0e;
-            color: white;
-            margin: 0;
-            padding: 0;
-        }
-
-        header {
-            background-color: #1a1a1a;
-            padding: 20px;
-            text-align: center;
-        }
-
-        h1 {
-            margin: 0;
-            font-size: 2em;
-            color: #00ffff;
-        }
-
-        .container {
-            display: flex;
-            flex-direction: row;
-            padding: 20px;
-            gap: 20px;
-        }
-
-        .links {
-            flex: 1;
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-            max-width: 300px;
-        }
-
-        .links a {
-            background-color: #222;
-            color: #00ffcc;
-            padding: 15px;
-            text-align: center;
-            text-decoration: none;
-            border-radius: 5px;
-            font-weight: bold;
-            transition: background 0.3s;
-        }
-
-        .links a:hover {
-            background-color: #333;
-        }
-
-        .content {
-            flex: 2;
-            padding: 20px;
-            background-color: #1a1a1a;
-            border-radius: 10px;
-        }
-
-        .footer {
-            text-align: center;
-            padding: 20px;
-            color: #777;
-            font-size: 0.9em;
-        }
-
-        @media (max-width: 768px) {
-            .container {
-                flex-direction: column;
-                align-items: center;
-            }
-            .content {
-                width: 100%;
-            }
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Scripts para Blox Fruits</title>
+  <style>
+    body {
+      background-color: #121212;
+      color: #eee;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background-color: #222;
+      padding: 20px;
+      text-align: center;
+      color: #0ff;
+      font-weight: bold;
+      font-size: 24px;
+    }
+    .container {
+      display: flex;
+      max-width: 900px;
+      margin: 20px auto;
+      gap: 20px;
+    }
+    nav {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+    nav button {
+      background-color: #222;
+      border: none;
+      color: #0ff;
+      padding: 12px;
+      cursor: pointer;
+      font-weight: bold;
+      border-radius: 5px;
+      text-align: left;
+      transition: background-color 0.3s;
+    }
+    nav button:hover {
+      background-color: #0ff;
+      color: #222;
+    }
+    main {
+      flex: 3;
+      background-color: #222;
+      border-radius: 8px;
+      padding: 20px;
+      line-height: 1.6;
+    }
+    main h2 {
+      margin-top: 0;
+      color: #fff;
+    }
+    footer {
+      text-align: center;
+      padding: 15px;
+      color: #666;
+      font-size: 14px;
+    }
+    pre {
+      background-color: #111;
+      color: #0ff;
+      padding: 10px;
+      border-radius: 5px;
+      overflow-x: auto;
+      max-height: 220px;
+      margin-top: 10px;
+      white-space: pre-wrap;
+      word-wrap: break-word;
+    }
+    .copy-btn {
+      margin-top: 10px;
+      background-color: #0ff;
+      color: #222;
+      border: none;
+      padding: 8px 12px;
+      font-weight: bold;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+  </style>
 </head>
 <body>
+  <header>Scripts para Blox Fruits</header>
+  <div class="container">
+    <nav>
+      <button onclick="showScript(1)">Link do Script 1</button>
+      <button onclick="showScript(2)">Link do Script 2</button>
+      <button onclick="showScript(3)">Link do Script 3</button>
+      <button onclick="showScript(4)">Link do Script 4</button>
+    </nav>
+    <main>
+      <h2>Sobre os Scripts</h2>
+      <p>
+        Bem-vindo! Aqui você encontra scripts atualizados para o jogo <strong>Blox Fruits</strong>. Use os links ao lado para baixar os scripts de forma segura. 🚀
+      </p>
+      <p>Atualizamos regularmente com novas versões e funcionalidades.</p>
+      <div id="scriptContent" style="display:none;">
+        <h3 id="scriptTitle"></h3>
+        <pre id="scriptCode"></pre>
+        <button class="copy-btn" onclick="copyCode()">Copiar Código</button>
+      </div>
+    </main>
+  </div>
+  <footer>© 2025 - Seus Scripts Blox Fruits | Todos os direitos reservados.</footer>
 
-    <header>
-        <h1>Scripts para Blox Fruits</h1>
-    </header>
+  <script>
+    const scripts = {
+      1: `loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/indexeduu/BF-NewVer/refs/heads/main/V3New.lua"))()`,
+      2: `loadstring(game:HttpGet("https://raw.githubusercontent.com/LuaCrack/Min/refs/heads/main/MinXt2Eng"))()`,
+      3: `loadstring(game:HttpGet("https://raw.githubusercontent.com/Omgshit/Scripts/main/MainLoader.lua"))()`,
+      4: `loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/45e8b569a783c8a8f4504eb41c3b18c4.lua"))()`
+    };
 
-    <div class="container">
-        <div class="links">
-            <a href="loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/45e8b569a783c8a8f4504eb41c3b18c4.lua"))()" target="_blank"> 1</a>
-            <a href="loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/45e8b569a783c8a8f4504eb41c3b18c4.lua"))()" target="_blank"> 1</a>
-            <a href="loadstring(game:HttpGet("https://raw.githubusercontent.com/Omgshit/Scripts/main/MainLoader.lua"))()" target="_blank">Link do Script 2</a>
-            <a href="loadstring(game:HttpGet("https://raw.githubusercontent.com/LuaCrack/Min/refs/heads/main/MinXt2Eng"))()" target="_blank">Link do Script 3</a>
-            <a href="loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/indexeduu/BF-NewVer/refs/heads/main/V3New.lua"))()" target="_blank">Link do Script 4</a>
-        </div>
+    function showScript(num) {
+      const title = "Script " + num;
+      const code = scripts[num];
+      document.getElementById("scriptTitle").textContent = title;
+      document.getElementById("scriptCode").textContent = code;
+      document.getElementById("scriptContent").style.display = "block";
+    }
 
-        <div class="content">
-            <h2>Sobre os Scripts</h2>
-            <p>Bem-vindo! Aqui você encontra scripts atualizados para o jogo <strong>Blox Fruits</strong>. Use os links ao lado para baixar os scripts de forma segura. 🚀</p>
-            <p>Atualizamos regularmente com novas versões e funcionalidades.</p>
-        </div>
-    </div>
-
-    <div class="footer">
-        © 2025 - Seus Scripts Blox Fruits | Todos os direitos reservados.
-    </div>
-
+    function copyCode() {
+      const code = document.getElementById("scriptCode").textContent;
+      navigator.clipboard.writeText(code).then(() => {
+        alert("Código copiado para a área de transferência!");
+      });
+    }
+  </script>
 </body>
 </html>
