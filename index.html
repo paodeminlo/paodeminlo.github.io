@@ -1,76 +1,110 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Scripts para Blox Fruits</title>
-<style>
-  body {
-    background-color: #121717;
-    color: #0ff;
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0 20px;
-  }
-  header {
-    background-color: #222;
-    padding: 20px;
-    text-align: center;
-    font-weight: bold;
-    font-size: 24px;
-    color: #0ff;
-  }
-  main {
-    max-width: 900px;
-    margin: 20px auto;
-  }
-  h2 {
-    color: white;
-  }
-  pre {
-    background-color: #111;
-    color: #0ff;
-    padding: 10px;
-    border-radius: 5px;
-    white-space: pre-wrap;
-    word-wrap: break-word;
-    max-height: 220px;
-    overflow-y: auto;
-    margin-bottom: 20px;
-  }
-  footer {
-    text-align: center;
-    padding: 15px;
-    color: #666;
-    font-size: 14px;
-  }
-</style>
+  <meta charset="UTF-8">
+  <title>Scripts</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: "Segoe UI", Tahoma, sans-serif;
+      background: #0d1117;
+      color: #c9d1d9;
+      display: flex;
+      height: 100vh;
+    }
+
+    /* Sidebar */
+    .sidebar {
+      width: 220px;
+      background: #161b22;
+      padding: 15px;
+      display: flex;
+      flex-direction: column;
+      border-right: 1px solid #30363d;
+    }
+
+    .sidebar button {
+      background: #21262d;
+      border: 1px solid #30363d;
+      color: #c9d1d9;
+      padding: 10px;
+      margin-bottom: 8px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 14px;
+      text-align: left;
+      transition: background 0.3s, transform 0.1s;
+    }
+
+    .sidebar button:hover {
+      background: #30363d;
+      transform: translateX(3px);
+    }
+
+    /* Área de conteúdo */
+    .content {
+      flex: 1;
+      padding: 20px;
+      overflow-y: auto;
+    }
+
+    .script {
+      display: none;
+      background: #161b22;
+      padding: 15px;
+      border-radius: 8px;
+      border: 1px solid #30363d;
+      white-space: pre-wrap;
+      font-family: monospace;
+      color: #58a6ff;
+    }
+
+    .script.active {
+      display: block;
+    }
+
+    h2 {
+      color: #f0f6fc;
+    }
+  </style>
 </head>
 <body>
-<header>Scripts para Blox Fruits</header>
-<main>
-  <h2>Sobre os Scripts</h2>
-  <p>Bem-vindo! Aqui você encontra scripts atualizados para o jogo <strong>Blox Fruits</strong>. Use os links abaixo para baixar os scripts de forma segura. 🚀</p>
-  <p>Atualizamos regularmente com novas versões e funcionalidades.</p>
+  <div class="sidebar">
+    <button onclick="mostrar('script1')">Script 1</button>
+    <button onclick="mostrar('script2')">Script 2</button>
+    <button onclick="mostrar('script3')">Script 3</button>
+  </div>
 
-  <h3>Script 1</h3>
-  <pre>loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/indexeduu/BF-NewVer/refs/heads/main/V3New.lua"))()</pre>
+  <div class="content">
+    <div id="script1" class="script active">
+      <h2>Script 1</h2>
+      <pre>
+console.log("Executando Script 1");
+      </pre>
+    </div>
 
-  <h3>Script 2</h3>
-  <pre>loadstring(game:HttpGet("https://raw.githubusercontent.com/Luakrack/Min/refs/heads/main/HnxKzt19"))()</pre>
+    <div id="script2" class="script">
+      <h2>Script 2</h2>
+      <pre>
+alert("Rodando Script 2");
+      </pre>
+    </div>
 
-  <h3>Script 3</h3>
-  <pre>loadstring(game:HttpGet("https://raw.githubusercontent.com/Omgsnit/Scripts/main/Mailloader.lua"))()</pre>
+    <div id="script3" class="script">
+      <h2>Script 3</h2>
+      <pre>
+function exemplo() {
+  return "Script 3 funcionando!";
+}
+      </pre>
+    </div>
+  </div>
 
-  <h3>Script 4</h3>
-  <pre>loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/45bdb56a9a138ca81458deb41c13b8c4.lua"))()</pre>
-
-  <!-- Se quiser adicionar o Script 5, coloque aqui no mesmo formato -->
-
-</main>
-<footer>
-  © 2025 - Seus Scripts Blox Fruits | Todos os direitos reservados.
-</footer>
+  <script>
+    function mostrar(id) {
+      document.querySelectorAll('.script').forEach(el => el.classList.remove('active'));
+      document.getElementById(id).classList.add('active');
+    }
+  </script>
 </body>
 </html>
-
