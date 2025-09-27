@@ -1,75 +1,44 @@
-  <!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Scripts para Blox Fruits</title>
-<style>
-  body {
-    background-color: #121717;
-    color: #0ff;
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0 20px;
-  }
-  header {
-    background-color: #222;
-    padding: 20px;
-    text-align: center;
-    font-weight: bold;
-    font-size: 24px;
-    color: #0ff;
-  }
-  main {
-    max-width: 900px;
-    margin: 20px auto;
-  }
-  h2 {
-    color: white;
-  }
-  pre {
-    background-color: #111;
-    color: #0ff;
-    padding: 10px;
-    border-radius: 5px;
-    white-space: pre-wrap;
-    word-wrap: break-word;
-    max-height: 220px;
-    overflow-y: auto;
-    margin-bottom: 20px;
-  }
-  footer {
-    text-align: center;
-    padding: 15px;
-    color: #666;
-    font-size: 14px;
-  }
-</style>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Menu com 2 Botões</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<header>Scripts para Blox Fruits</header>
-<main>
-  <h2>Sobre os Scripts</h2>
-  <p>Bem-vindo! Aqui você encontra scripts atualizados para o jogo <strong>Blox Fruits</strong>. Use os links abaixo para baixar os scripts de forma segura. 🚀</p>
-  <p>Atualizamos regularmente com novas versões e funcionalidades.</p>
+  <main class="container">
+    <h1>Escolha uma opção</h1>
 
-  <h3>Script 1</h3>
-  <pre>loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/indexeduu/BF-NewVer/refs/heads/main/V3New.lua"))()</pre>
+    <div class="buttons">
+      <div class="menu-wrapper">
+        <button id="btnA" class="action-btn" aria-haspopup="true" aria-expanded="false">
+          Botão A
+        </button>
+        <ul id="menuA" class="menu" role="menu" aria-label="Opções do Botão A">
+          <!-- Substitua os itens abaixo pelos links que você vai enviar -->
+          <li role="none"><a role="menuitem" href="https://example.com/1" target="_blank" rel="noopener">Opção A1</a></li>
+          <li role="none"><a role="menuitem" href="https://example.com/2" target="_blank" rel="noopener">Opção A2</a></li>
+          <li role="none"><a role="menuitem" href="https://example.com/3" target="_blank" rel="noopener">Opção A3</a></li>
+        </ul>
+      </div>
 
-  <h3>Script 2</h3>
-  <pre>loadstring(game:HttpGet("https://raw.githubusercontent.com/Luakrack/Min/refs/heads/main/HnxKzt19"))()</pre>
+      <div class="menu-wrapper">
+        <button id="btnB" class="action-btn" aria-haspopup="true" aria-expanded="false">
+          Botão B
+        </button>
+        <ul id="menuB" class="menu" role="menu" aria-label="Opções do Botão B">
+          <!-- Substitua os itens abaixo pelos links que você vai enviar -->
+          <li role="none"><a role="menuitem" href="https://example.com/4" target="_blank" rel="noopener">Opção B1</a></li>
+          <li role="none"><a role="menuitem" href="https://example.com/5" target="_blank" rel="noopener">Opção B2</a></li>
+          <li role="none"><a role="menuitem" href="https://example.com/6" target="_blank" rel="noopener">Opção B3</a></li>
+        </ul>
+      </div>
+    </div>
 
-  <h3>Script 3</h3>
-  <pre>loadstring(game:HttpGet("https://raw.githubusercontent.com/Omgsnit/Scripts/main/Mailloader.lua"))()</pre>
+    <p class="hint">Dica: envie as URLs/nomes que quer em cada menu e eu já atualizo aqui pra você.</p>
+  </main>
 
-  <h3>Script 4</h3>
-  <pre>loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/45bdb56a9a138ca81458deb41c13b8c4.lua"))()</pre>
-
-  <!-- Se quiser adicionar o Script 5, coloque aqui no mesmo formato -->
-
-</main>
-<footer>
-  © 2025 - Seus Scripts Blox Fruits | Todos os direitos reservados.
-</footer>
+  <script src="script.js"></script>
 </body>
 </html>
