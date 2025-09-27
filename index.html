@@ -1,44 +1,128 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Menu com 2 Botões</title>
-  <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Menu Interativo - Roblox Lite</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #0d1117;
+      color: #e6edf3;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    .container {
+      text-align: center;
+      max-width: 320px;
+      width: 90vw;
+    }
+    h1 {
+      margin-bottom: 30px;
+    }
+    .button-group {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+    .toggle-btn {
+      padding: 12px 24px;
+      background-color: #238636;
+      border: none;
+      color: white;
+      font-size: 16px;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background-color 0.3s ease, transform 0.2s ease;
+      user-select: none;
+    }
+    .toggle-btn:hover {
+      background-color: #2ea043;
+    }
+    .toggle-btn:active {
+      transform: scale(0.95);
+    }
+    .menu {
+      display: flex;
+      flex-direction: column;
+      margin-top: 10px;
+      gap: 8px;
+      animation: fadeIn 0.3s ease forwards;
+      opacity: 1;
+      max-height: 1000px; /* para animação */
+      transition: max-height 0.3s ease, opacity 0.3s ease;
+      overflow: hidden;
+    }
+    .menu.hidden {
+      opacity: 0;
+      max-height: 0;
+      pointer-events: none;
+    }
+    .menu a {
+      text-decoration: none;
+      color: #58a6ff;
+      background-color: #161b22;
+      padding: 10px;
+      border-radius: 4px;
+      transition: background-color 0.3s ease;
+      user-select: text;
+    }
+    .menu a:hover {
+      background-color: #21262d;
+    }
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(-5px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
 </head>
 <body>
-  <main class="container">
+  <div class="container">
     <h1>Escolha uma opção</h1>
 
-    <div class="buttons">
-      <div class="menu-wrapper">
-        <button id="btnA" class="action-btn" aria-haspopup="true" aria-expanded="false">
-          Botão A
-        </button>
-        <ul id="menuA" class="menu" role="menu" aria-label="Opções do Botão A">
-          <!-- Substitua os itens abaixo pelos links que você vai enviar -->
-          <li role="none"><a role="menuitem" href="https://example.com/1" target="_blank" rel="noopener">Opção A1</a></li>
-          <li role="none"><a role="menuitem" href="https://example.com/2" target="_blank" rel="noopener">Opção A2</a></li>
-          <li role="none"><a role="menuitem" href="https://example.com/3" target="_blank" rel="noopener">Opção A3</a></li>
-        </ul>
+    <div class="button-group">
+      <button class="toggle-btn" onclick="toggleMenu('menuA')" aria-expanded="false" aria-controls="menuA">
+        Roblox Lite 32Bits
+      </button>
+      <div id="menuA" class="menu hidden" role="region" aria-live="polite">
+        <a href="https://encurtalink.online/it7g" target="_blank" rel="noopener noreferrer">Roblox Lite 32Bits</a>
       </div>
 
-      <div class="menu-wrapper">
-        <button id="btnB" class="action-btn" aria-haspopup="true" aria-expanded="false">
-          Botão B
-        </button>
-        <ul id="menuB" class="menu" role="menu" aria-label="Opções do Botão B">
-          <!-- Substitua os itens abaixo pelos links que você vai enviar -->
-          <li role="none"><a role="menuitem" href="https://example.com/4" target="_blank" rel="noopener">Opção B1</a></li>
-          <li role="none"><a role="menuitem" href="https://example.com/5" target="_blank" rel="noopener">Opção B2</a></li>
-          <li role="none"><a role="menuitem" href="https://example.com/6" target="_blank" rel="noopener">Opção B3</a></li>
-        </ul>
+      <button class="toggle-btn" onclick="toggleMenu('menuB')" aria-expanded="false" aria-controls="menuB">
+        Roblox Lite 64Bits
+      </button>
+      <div id="menuB" class="menu hidden" role="region" aria-live="polite">
+        <a href="https://encurtalink.online/GbzXa" target="_blank" rel="noopener noreferrer">Roblox lite 64Bits</a>
       </div>
     </div>
+  </div>
 
-    <p class="hint">Dica: envie as URLs/nomes que quer em cada menu e eu já atualizo aqui pra você.</p>
-  </main>
+  <script>
+    function toggleMenu(id) {
+      const menu = document.getElementById(id);
+      const isHidden = menu.classList.contains('hidden');
+      // fechar todos menus antes de abrir um
+      document.querySelectorAll('.menu').forEach(m => {
+        m.classList.add('hidden');
+        const btn = document.querySelector(`[aria-controls="${m.id}"]`);
+        if (btn) btn.setAttribute('aria-expanded', 'false');
+      });
 
-  <script src="script.js"></script>
+      if (isHidden) {
+        menu.classList.remove('hidden');
+        const btn = document.querySelector(`[aria-controls="${menu.id}"]`);
+        if (btn) btn.setAttribute('aria-expanded', 'true');
+      }
+    }
+  </script>
 </body>
 </html>
